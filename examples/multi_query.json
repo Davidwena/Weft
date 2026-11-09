@@ -1,0 +1,66 @@
+{
+    "multi": {
+        "common": {
+            "n": 3,
+            "initiator": 2,
+            "king": 0,
+            "open_mode": "auto",
+            "rows": [
+                6,
+                6,
+                6
+            ],
+            "kin": 4,
+            "kout": 3,
+            "windows": [
+                [
+                    0,
+                    6
+                ]
+            ]
+        },
+        "templates": [
+            {
+                "name": "pairs",
+                "pattern": "P1",
+                "window": [
+                    0,
+                    6
+                ],
+                "operator": "nl"
+            },
+            {
+                "name": "amount",
+                "pattern": "P2",
+                "window": [
+                    0,
+                    6
+                ],
+                "operator": "nl",
+                "filter": "risk"
+            },
+            {
+                "name": "split",
+                "pattern": "P3",
+                "window": [
+                    0,
+                    3
+                ],
+                "a_lo": 99,
+                "a_hi": 104,
+                "m": 2,
+                "operator": "dc"
+            },
+            {
+                "name": "returning",
+                "pattern": "P4",
+                "window": [
+                    0,
+                    6
+                ],
+                "operator": "dc",
+                "filter": "risk"
+            }
+        ]
+    }
+}
